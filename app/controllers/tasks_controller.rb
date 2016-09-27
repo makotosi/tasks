@@ -25,6 +25,7 @@ class TasksController < ApplicationController
   # POST /tasks.json
   def create
     @task = Task.new(task_params)
+    @task.save
     redirect_to root_path
 =begin
     respond_to do |format|
